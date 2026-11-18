@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: tickets
+  datasource:
+    # File-based H2 so data survives restarts. Set DATA_DIR to an absolute path so the DB does not depend on the working directory. Switch to PostgreSQL with --spring.profiles.active=postgres
+    url: jdbc:h2:file:${DATA_DIR:./data}/tickets;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password: ""
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  jackson:
+    deserialization:
+      fail-on-unknown-properties: true
+
+app:
+  cors:
+    allowed-origin: ${FRONTEND_ORIGIN:http://localhost:5173}

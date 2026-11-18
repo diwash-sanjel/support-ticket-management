@@ -1,0 +1,6 @@
+# Credentials come ONLY from environment variables (see backend/.env.example). Never put a default password here.
+spring:
+  datasource:
+    url: ${DB_URL}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}

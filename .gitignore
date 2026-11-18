@@ -1,0 +1,25 @@
+# Runtime data (H2 file DB) and secrets
+data/
+*.db
+*.mv.db
+*.trace.db
+.env
+.env.*
+!.env.example
+
+# Build output / dependencies
+target/
+node_modules/
+dist/
+
+# IDE / OS
+.idea/
+.vscode/
+*.iml
+.DS_Store
+.claude/settings.local.json
+
+# Test artifacts
+test-results/
+playwright-report/
+backend/target/
